@@ -1,0 +1,121 @@
+:root {
+      --primary-color: #6c63ff;
+      --accent-color: #ff6584;
+      --bg-color: #f5f7fa;
+      --text-color: #333;
+      --button-text: #fff;
+      --card-bg: #ffffff;
+      --border-radius: 12px;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 750px;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    #progress {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1em;
+      color: #777;
+    }
+
+    .question {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .answers button {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      background: var(--primary-color);
+      color: var(--button-text);
+      font-weight: bold;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .answers button:hover {
+      background: #5750d4;
+      transform: translateY(-2px);
+    }
+
+    .result {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: var(--accent-color);
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .controls button {
+      padding: 12px 24px;
+      background: var(--accent-color);
+      color: var(--button-text);
+      border: none;
+      border-radius: var(--border-radius);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .controls button:hover {
+      background: #e14c6c;
+    }
+
+    #stopBtn {
+      background-color: #f44336;
+    }
+
+    #stopBtn:hover {
+      background-color: #d32f2f;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      .answers button, .controls button {
+        font-size: 1em;
+      }
+    }
